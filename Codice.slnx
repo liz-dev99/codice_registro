@@ -2,5 +2,6 @@
   <Folder Name="/Codice.Registro/">
     <Project Path="Codice.Registro/Codice.Registro/Codice.Registro.csproj" />
   </Folder>
+  <Project Path="Codice.App/Codice.App.csproj" />
   <Project Path="Codice.Tests/Codice.Tests.csproj" />
 </Solution>
