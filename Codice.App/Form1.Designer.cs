@@ -41,6 +41,8 @@ partial class Form1
         label5 = new Label();
         txtNota = new TextBox();
         btnAgregarNota = new Button();
+        btnVerPromedio = new Button();
+        lblPromedio = new Label();
         SuspendLayout();
         // 
         // label1
@@ -153,11 +155,32 @@ partial class Form1
         btnAgregarNota.UseVisualStyleBackColor = true;
         btnAgregarNota.Click += btnAgregarNota_Click;
         // 
+        // btnVerPromedio
+        // 
+        btnVerPromedio.Location = new Point(365, 261);
+        btnVerPromedio.Name = "btnVerPromedio";
+        btnVerPromedio.Size = new Size(137, 29);
+        btnVerPromedio.TabIndex = 13;
+        btnVerPromedio.Text = "Ver Promedio";
+        btnVerPromedio.UseVisualStyleBackColor = true;
+        btnVerPromedio.Click += btnVerPromedio_Click;
+        // 
+        // lblPromedio
+        // 
+        lblPromedio.AutoSize = true;
+        lblPromedio.Location = new Point(521, 265);
+        lblPromedio.Name = "lblPromedio";
+        lblPromedio.Size = new Size(87, 20);
+        lblPromedio.TabIndex = 14;
+        lblPromedio.Text = "Promedio: -";
+        // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
+        Controls.Add(lblPromedio);
+        Controls.Add(btnVerPromedio);
         Controls.Add(btnAgregarNota);
         Controls.Add(txtNota);
         Controls.Add(label5);
@@ -192,4 +215,6 @@ partial class Form1
     private Label label5;
     private TextBox txtNota;
     private Button btnAgregarNota;
+    private Button btnVerPromedio;
+    private Label lblPromedio;
 }

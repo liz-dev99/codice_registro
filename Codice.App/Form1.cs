@@ -70,4 +70,25 @@ public partial class Form1 : Form
         MessageBox.Show($"Nota {valor:0.0} registrada para {estudiante.Nombre} en {asignatura.Nombre}.");
         txtNota.Clear();
     }
+
+    private void btnVerPromedio_Click(object sender, EventArgs e)
+    {
+        if (lstEstudiantes.SelectedIndex == -1)
+        {
+            MessageBox.Show("Selecciona un estudiante de la lista.");
+            return;
+        }
+        if (cmbAsignatura.SelectedIndex == -1)
+        {
+            MessageBox.Show("Selecciona una asignatura.");
+            return;
+        }
+
+        var estudiante = estudiantes[lstEstudiantes.SelectedIndex];
+        var asignatura = asignaturas[cmbAsignatura.SelectedIndex];
+        double promedio = estudiante.CalcularPromedio(asignatura);
+
+        lblPromedio.Text = $"Promedio de {estudiante.Nombre} en {asignatura.Nombre}: {promedio:0.0}";
+
+    }
 }
