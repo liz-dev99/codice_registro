@@ -36,6 +36,11 @@ partial class Form1
         txtEmail = new TextBox();
         btnAgregarEstudiante = new Button();
         lstEstudiantes = new ListBox();
+        label4 = new Label();
+        cmbAsignatura = new ComboBox();
+        label5 = new Label();
+        txtNota = new TextBox();
+        btnAgregarNota = new Button();
         SuspendLayout();
         // 
         // label1
@@ -104,11 +109,60 @@ partial class Form1
         lstEstudiantes.Size = new Size(198, 184);
         lstEstudiantes.TabIndex = 7;
         // 
+        // label4
+        // 
+        label4.AutoSize = true;
+        label4.Location = new Point(389, 66);
+        label4.Name = "label4";
+        label4.Size = new Size(83, 20);
+        label4.TabIndex = 8;
+        label4.Text = "Asignatura:";
+        // 
+        // cmbAsignatura
+        // 
+        cmbAsignatura.DropDownStyle = ComboBoxStyle.DropDownList;
+        cmbAsignatura.FormattingEnabled = true;
+        cmbAsignatura.Location = new Point(481, 63);
+        cmbAsignatura.Name = "cmbAsignatura";
+        cmbAsignatura.Size = new Size(151, 28);
+        cmbAsignatura.TabIndex = 9;
+        // 
+        // label5
+        // 
+        label5.AutoSize = true;
+        label5.Location = new Point(389, 134);
+        label5.Name = "label5";
+        label5.Size = new Size(113, 20);
+        label5.TabIndex = 10;
+        label5.Text = "Nota (1,0 a 7,0):";
+        // 
+        // txtNota
+        // 
+        txtNota.Location = new Point(508, 127);
+        txtNota.Name = "txtNota";
+        txtNota.Size = new Size(125, 27);
+        txtNota.TabIndex = 11;
+        // 
+        // btnAgregarNota
+        // 
+        btnAgregarNota.Location = new Point(506, 188);
+        btnAgregarNota.Name = "btnAgregarNota";
+        btnAgregarNota.Size = new Size(126, 29);
+        btnAgregarNota.TabIndex = 12;
+        btnAgregarNota.Text = "Agregar Nota";
+        btnAgregarNota.UseVisualStyleBackColor = true;
+        btnAgregarNota.Click += btnAgregarNota_Click;
+        // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
+        Controls.Add(btnAgregarNota);
+        Controls.Add(txtNota);
+        Controls.Add(label5);
+        Controls.Add(cmbAsignatura);
+        Controls.Add(label4);
         Controls.Add(lstEstudiantes);
         Controls.Add(btnAgregarEstudiante);
         Controls.Add(txtEmail);
@@ -133,4 +187,9 @@ partial class Form1
     private TextBox txtEmail;
     private Button btnAgregarEstudiante;
     private ListBox lstEstudiantes;
+    private Label label4;
+    private ComboBox cmbAsignatura;
+    private Label label5;
+    private TextBox txtNota;
+    private Button btnAgregarNota;
 }
