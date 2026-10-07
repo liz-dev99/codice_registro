@@ -1,0 +1,23 @@
+name: Pruebas unitarias
+
+on:
+  push:
+    branches: [ "main", "develop", "feature/**" ]
+  pull_request:
+    branches: [ "main", "develop" ]
+
+jobs:
+  pruebas:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v4
+
+      - name: Instalar .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Ejecutar pruebas
+        run: dotnet test Codice.Tests/Codice.Tests.csproj --logger "console;verbosity=detailed"
